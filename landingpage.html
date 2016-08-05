@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    body{
+      overflow-x: hidden;
+    }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Portfolio</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Gallery</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-log-in"></span> Login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron logo-container">
+      <img class="img-responsive" src="img/logo/png.png">
+    </div>
+    <div class="row">
+      <div class="col-sm-3 sidenav">
+        <div class="price-container">
+          <h4 class="text-center">Price</h4>
+          <!-- <input type="checkbox">1000-2000</input>
+          <br>
+          <input type="checkbox">2001-5000</input>
+          <br>
+          <input type="checkbox">5001-10000</input>
+          <br>
+          <input type="checkbox">10001-15000</input>
+          <br>
+          <input type="checkbox">15001-20000</input> -->
+          <form>
+            <div data-role="rangeslider">
+              <label for="price-min">Price:</label>
+              <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+              <label for="price-max">Price:</label>
+              <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+            </div>
+            <button>Apply</button>
+          </form>
+        </div>
+        <div class="">
+          <h4 class="text-center">Rating</h4>
+          <input type="checkbox">1 Star</input>
+          <br>
+          <input type="checkbox">2 Star</input>
+          <br>
+          <input type="checkbox">3 Star</input>
+          <br>
+          <input type="checkbox">4 Star</input>
+          <br>
+          <input type="checkbox">5 Star</input>
+        </div>
+      </div>
+      <div class="col-sm-9 anchor-main-container">
+        <div class="row anchor-new-row">
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/test.jpg">
+            </div>
+            <div>
+              <h3>Name</h3>
+              <p>Kochi</p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div>
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/test.jpg">
+            </div>
+            <div>
+              <h3>Name</h3>
+              <p>Kochi</p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div>
+          <!-- <div class="col-sm-4 anchor-container">
+            <div class="img">
+              <img src="img/test.jpg">
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div> -->
+        </div>
+
+        <div class="row anchor-new-row">
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/test.jpg">
+            </div>
+            <div>
+              <h3>Name</h3>
+              <p>Kochi</p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div>
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/test.jpg">
+            </div>
+            <div>
+              <h3>Name</h3>
+              <p>Kochi</p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div>
+          <!-- <div class="col-sm-4 anchor-container">
+            <div class="img">
+              <img src="img/test.jpg">
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div> -->
+        </div>
+      </div>  
+    </div>  
+
+    <footer class="container-fluid text-center">
+      <div class="col-md-4">
+        <span class="glyphicon glyphicon-earphone"></span>
+        <span>+91 9995599449</span>
+      </div>
+      <div class="col-md-4">
+        <span class="glyphicon glyphicon-envelope"></span>
+        <span>info@bookmyanchors.com</span>
+      </div>
+      <div class="col-md-4">
+        <span class="glyphicon glyphicon-map-marker"></span>
+        <span>skldmglsmg</span>
+      </div>
+      <div class="col-md-6">
+        <span>www.shadowtechlt.com</span>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <div class="google"></div>
+        </div>
+      </div>
+    </footer>
+
+
+  </body>
+</html>
+
