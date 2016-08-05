@@ -1,0 +1,89 @@
+.logo-container{
+	padding: 0;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+	height: 550px
+}
+
+.sidenav{
+	height: 100%;
+}
+
+.form-container{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-container form .form-control{
+	margin-bottom: 20px;
+	height: 49px;
+}
+
+.google{
+	width: 46px;
+    height: 44px;
+    background: url(../img/social.png) 0 0;
+}
+
+.img img{
+	width: 150px;
+}
+.img{
+	padding-bottom: 10px;
+}
+
+.anchor-container{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 40%;
+	margin-left: 50px;
+}
+
+.anchor-new-row{
+	margin-bottom: 25px;
+}
+
+.price-container{
+	padding-left: 2px;
+}
+
+.anchor-main-container{
+	padding-top: 25px;
+	padding-left: 25px;
+}
+
+.anchor-container .btn-default{
+	background-color: #b30000;
+	color: #fff;
+}
+
+.anchor-star{
+	color: #ffad33;
+}
+
+.anchor-image{
+	float: left;
+	margin-right: 25px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+.jumbotron{
+  margin-bottom: 0;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100% !important;
+}
+    
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+  .row.content {height: auto;}
+}
+.navbar{
+  margin-bottom: 0;
+}
