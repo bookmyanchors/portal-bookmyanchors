@@ -4,19 +4,65 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <title>jQuery UI Slider functionality</title>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <style>
+        body{
+          overflow-x: hidden;
+        }
+        .ui-widget-header{
+          background: #b30000;
+        }
+        button a{
+          color: #fff;
+          text-decoration: none;
+        }
+        button a:hover{
+          color: #fff;
+          text-decoration: none;
+        }
+      </style>
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#slider-3" ).slider({
+               range:true,
+               min: 0,
+               max: 500,
+               values: [ 35, 200 ],
+               slide: function( event, ui ) {
+                  $( "#price1" ).val(ui.values[ 0 ]);
+                  $( "#price2" ).val(ui.values[ 1 ]);
+               }
+           });
+         $( "#price1" ).val($( "#slider-3" ).slider( "values", 0 ));
+         $( "#price2" ).val($( "#slider-3" ).slider( "values", 1 ));
+         });
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <style>
-    body{
-      overflow-x: hidden;
-    }
-    </style>
+         $(function() {
+            $( "#slider-4" ).slider({
+               range:true,
+               min: 1,
+               max: 6,
+               values: [ 1, 6 ],
+               slide: function( event, ui ) {
+                  $( "#price3" ).val(ui.values[ 0 ]);
+                  $( "#price4" ).val(ui.values[ 1 ]);
+               }
+           });
+         $( "#price3" ).val($( "#slider-4" ).slider( "values", 0 ));
+         $( "#price4" ).val($( "#slider-4" ).slider( "values", 1 ));
+         });
+      </script>
   </head>
   <body>
 
@@ -61,49 +107,92 @@
     </div>
     <div class="row">
       <div class="col-sm-3 sidenav">
-        <div class="price-container">
-          <h4 class="text-center">Price</h4>
-          <!-- <input type="checkbox">1000-2000</input>
-          <br>
-          <input type="checkbox">2001-5000</input>
-          <br>
-          <input type="checkbox">5001-10000</input>
-          <br>
-          <input type="checkbox">10001-15000</input>
-          <br>
-          <input type="checkbox">15001-20000</input> -->
-          <form>
-            <div data-role="rangeslider">
-              <label for="price-min">Price:</label>
-              <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-              <label for="price-max">Price:</label>
-              <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
-            </div>
-            <button>Apply</button>
-          </form>
-        </div>
-        <div class="">
-          <h4 class="text-center">Rating</h4>
-          <input type="checkbox">1 Star</input>
-          <br>
-          <input type="checkbox">2 Star</input>
-          <br>
-          <input type="checkbox">3 Star</input>
-          <br>
-          <input type="checkbox">4 Star</input>
-          <br>
-          <input type="checkbox">5 Star</input>
-        </div>
+        <form>
+          <div class="price-container">
+            <h4 class="text-center">Price Range</h4>
+            <input type="text" id="price1" class="form-control">
+              <div id="slider-3"></div>
+            <input type="text" id="price2" class="form-control">
+          </div>
+          <div class="">
+            <h4 class="text-center">Rating</h4>
+            <input type="checkbox">  </input>
+            <span class="glyphicon glyphicon-star"></span>
+            <br>
+            <input type="checkbox">  </input>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <br>
+            <input type="checkbox">  </input>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <br>
+            <input type="checkbox">  </input>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <br>
+            <input type="checkbox">  </input>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+            <span class="glyphicon glyphicon-star"></span>
+          </div>
+          <div>
+            <h4 class="text-center">Available</h4>
+            <input type="checkbox">  Online</input>
+            <br/>
+            <input type="checkbox">  Offline</input>
+          </div>
+          <div>
+            <h4 class="text-center">Gender</h4>
+            <input type="checkbox">  Male</input>
+            <br/>
+            <input type="checkbox">  Female</input>
+          </div>
+          <div>
+            <h4>Performing Members</h4>
+            <input type="text" id="price3" class="form-control">
+              <div id="slider-4"></div>
+            <input type="text" id="price4" class="form-control">
+          </div>
+          <div>
+            <h4>Event Type</h4>
+            <select class="form-control">
+              <option>a</option>
+              <option>a</option>
+              <option>a</option>
+              <option>a</option>
+            </select>
+          </div>
+          <div>
+            <h4>Languages</h4>
+            <input type="checkbox">English</input>
+            <input type="checkbox">Malayalam</input>
+            <input type="checkbox">Tamil</input>
+            <input type="checkbox">Kanada</input>
+            <input type="checkbox">Punjabi</input>
+            <input type="checkbox">Telugu</input>
+            <input type="checkbox">Marathi</input>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary">Apply Filter</button>
+          </div>
+        </form>
       </div>
       <div class="col-sm-9 anchor-main-container">
         <div class="row anchor-new-row">
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
-              <img src="img/test.jpg">
+              <img src="img/anchors/anjana/_91A9911.jpg">
             </div>
             <div>
-              <h3>Name</h3>
-              <p>Kochi</p>
+              <h3>Anjana</h3>
+              <span>Emcee/Anchor</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -112,16 +201,17 @@
                 <span class="glyphicon glyphicon-star"></span>
               </div>
             </div>
-            <button class="btn btn-default">Book</button>
-            <button class="btn btn-default">Profile</button>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
           </div>
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
-              <img src="img/test.jpg">
+              <img src="img/anchors/dayana/_91A0024.jpg">
             </div>
             <div>
-              <h3>Name</h3>
-              <p>Kochi</p>
+              <h3>Dayana</h3>
+              <span>Emcee/Anchor/VJ/Actores</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -130,8 +220,8 @@
                 <span class="glyphicon glyphicon-star"></span>
               </div>
             </div>
-            <button class="btn btn-default">Book</button>
-            <button class="btn btn-default">Profile</button>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a></button>
           </div>
           <!-- <div class="col-sm-4 anchor-container">
             <div class="img">
@@ -145,11 +235,12 @@
         <div class="row anchor-new-row">
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
-              <img src="img/test.jpg">
+              <img src="img/anchors/mariyamma/_91A9671.jpg">
             </div>
             <div>
-              <h3>Name</h3>
-              <p>Kochi</p>
+              <h3>Mariyamma</h3>
+              <span>Emcee/Anchor/VJ</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -158,16 +249,17 @@
                 <span class="glyphicon glyphicon-star"></span>
               </div>
             </div>
-            <button class="btn btn-default">Book</button>
-            <button class="btn btn-default">Profile</button>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
           </div>
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
-              <img src="img/test.jpg">
+              <img src="img/anchors/meenakshi/_91A9848.jpg">
             </div>
             <div>
-              <h3>Name</h3>
-              <p>Kochi</p>
+              <h3>Meenakshi</h3>
+              <span>Emcee/Anchor</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -176,8 +268,8 @@
                 <span class="glyphicon glyphicon-star"></span>
               </div>
             </div>
-            <button class="btn btn-default">Book</button>
-            <button class="btn btn-default">Profile</button>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
           </div>
           <!-- <div class="col-sm-4 anchor-container">
             <div class="img">
@@ -187,6 +279,153 @@
             <button class="btn btn-default">Profile</button>
           </div> -->
         </div>
+
+        <div class="row anchor-new-row">
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/anchors/midun/_91A9542.jpg">
+            </div>
+            <div>
+              <h3>Midun</h3>
+              <span>Emcee/Anchor</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
+          </div>
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/anchors/rajesh/_91A9598.jpg">
+            </div>
+            <div>
+              <h3>Rajesh</h3>
+              <span>Emcee/Anchor/Artist</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
+          </div>
+          <!-- <div class="col-sm-4 anchor-container">
+            <div class="img">
+              <img src="img/test.jpg">
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div> -->
+        </div>
+
+
+        <div class="row anchor-new-row">
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/anchors/hingston/10401967_10204628088844416_4736984207701486366_n.jpg">
+            </div>
+            <div>
+              <h3>Hingston</h3>
+              <span>Emcee/Anchor</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
+          </div>
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/anchors/malu/09.jpg">
+            </div>
+            <div>
+              <h3>Malu</h3>
+              <span>Emcee/Anchor/Artist</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
+          </div>
+          <!-- <div class="col-sm-4 anchor-container">
+            <div class="img">
+              <img src="img/test.jpg">
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div> -->
+        </div>
+
+
+        <div class="row anchor-new-row">
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/anchors/anmarin/603504_421798967878434_14949523_n.jpg">
+            </div>
+            <div>
+              <h3>An Marin</h3>
+              <span>Emcee/Anchor</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
+          </div>
+          <div class="col-sm-6 anchor-container">
+            <div class="img anchor-image">
+              <img src="img/anchors/malu/09.jpg">
+            </div>
+            <div>
+              <h3>Meenakshi</h3>
+              <span>Emcee/Anchor/Artist</span>
+              <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
+              <div class="anchor-star">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <button class="btn btn-default">Book Now</button>
+            <button class="btn btn-default"><a href="test.html">View Profile</a>
+          </div>
+          <!-- <div class="col-sm-4 anchor-container">
+            <div class="img">
+              <img src="img/test.jpg">
+            </div>
+            <button class="btn btn-default">Book</button>
+            <button class="btn btn-default">Profile</button>
+          </div> -->
+        </div>
+
       </div>  
     </div>  
 
