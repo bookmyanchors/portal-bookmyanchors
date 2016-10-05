@@ -137,6 +137,9 @@
 			.right-addon input { padding-right: 30px; }
 			.left-addon select  { padding-left:  30px; }
 			.right-addon select { padding-right: 30px; }
+			.hide{
+				display: none;
+			}
 		</style>
 		<script type="text/javascript">
         $(document).ready(function(){
@@ -167,6 +170,10 @@
             $("#btn-photos").addClass("actived");
           });
           $("#btn-biography").addClass("actived");
+          $(".contact-submit").click(function(){
+          	$(".contact-details-form").addClass("hide");
+          	$(".event-details-form").removeClass("hide");
+          });
         });
       </script>
 	</head>
@@ -224,62 +231,138 @@
 					</div>		
 				</div>
 				<div class="col-sm-9">
-					<form>
-						<div class="quote-container">
-							<h3 class="text-center">Quick Quote Form</h3>
-							<div class="col-sm-6">
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<input type="text" class="form-control" placeholder="Contact Person"/>
-								</div>
+					 <!-- Contact Details details -->
+					<div class="contact-details-form">
+						<form>
+							<div class="quote-container">
+								<h3 class="text-center">Contact Details</h3>
+								<div class="col-sm-6">
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Contact Person"/>
+									</div>
 
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<input type="text" class="form-control" placeholder="Mobile Number"/>
-								</div>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Mobile Number"/>
+									</div>
 
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<input placeholder="Date" class="textbox-n form-control" type="text" onfocus="(this.type='date')"  id="date">
-								</div>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Company Name"/>
+									</div>
 
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<input type="text" class="form-control" placeholder="Budget"/>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Company address"/>
+									</div>
+									<!-- <input type="text" name="" class="col-sm-12 form-control" placeholder="Mobile Number">
+									<input type="date" name="" class="col-sm-12 form-control" placeholder="Event Date">
+									<input type="text" name="" class="col-sm-12 form-control" placeholder="Budget"> -->
 								</div>
-								<!-- <input type="text" name="" class="col-sm-12 form-control" placeholder="Mobile Number">
-								<input type="date" name="" class="col-sm-12 form-control" placeholder="Event Date">
-								<input type="text" name="" class="col-sm-12 form-control" placeholder="Budget"> -->
+								<div class="col-sm-6">
+
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Email"/>
+									</div>
+
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Alternative number"/>
+									</div>
+
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Company Address"/>
+									</div>
+
+									<!-- <div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<select class="col-sm-12 form-control">
+											<option value="" disabled selected>Event Type</option>
+											<option>A</option>
+											<option>B</option>
+										</select>
+									</div> -->
+								</div>
+								<button type="button" class="col-sm-12 btn btn-primary contact-submit">Submit</button>
 							</div>
-							<div class="col-sm-6">
+						</form>
+					</div>
+					<!-- contact details end -->
+					<!-- event details -->
+					<div class="event-details-form hide">
+						<form>
+							<div class="quote-container">
+								<h3 class="text-center">Event Details</h3>
+								<div class="col-sm-6">
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input placeholder="Start Time" class="textbox-n form-control" type="text" onfocus="(this.type='time')"  id="date">
+									</div>
 
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<input type="text" class="form-control" placeholder="Email"/>
-								</div>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Event Place"/>
+									</div>
 
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<input type="text" class="form-control" placeholder="Location"/>
-								</div>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Event Briefing"/>
+									</div>
 
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<input type="text" class="form-control" placeholder="Duration"/>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<select class="col-sm-12 form-control">
+											<option value="" disabled selected>Costume</option>
+											<option>A</option>
+											<option>B</option>
+										</select>
+									</div>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="City"/>
+									</div>
+									<!-- <input type="text" name="" class="col-sm-12 form-control" placeholder="Mobile Number">
+									<input type="date" name="" class="col-sm-12 form-control" placeholder="Event Date">
+									<input type="text" name="" class="col-sm-12 form-control" placeholder="Budget"> -->
 								</div>
+								<div class="col-sm-6">
 
-								<div class="inner-addon left-addon">
-    								<i class="glyphicon glyphicon-user"></i>
-    								<select class="col-sm-12 form-control">
-										<option value="" disabled selected>Event Type</option>
-										<option>A</option>
-										<option>B</option>
-									</select>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input placeholder="End Time" class="textbox-n form-control" type="text" onfocus="(this.type='time')"  id="date">
+									</div>
+
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Event Venue"/>
+									</div>
+
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="Duration"/>
+									</div>
+
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<select class="col-sm-12 form-control">
+											<option value="" disabled selected>Event Type</option>
+											<option>A</option>
+											<option>B</option>
+										</select>
+									</div>
+									<div class="inner-addon left-addon">
+	    								<i class="glyphicon glyphicon-user"></i>
+	    								<input type="text" class="form-control" placeholder="State"/>
+									</div>
 								</div>
+								<button type="submit" class="col-sm-12 btn btn-primary">Submit</button>
 							</div>
-							<button type="submit" class="col-sm-12 btn btn-primary">Submit</button>
-						</div>
-					</form>
+						</form>
+					</div>
+					<!-- event details end -->
 				</div>
 			</div>
 		</div>
