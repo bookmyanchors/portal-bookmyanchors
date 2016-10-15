@@ -34,10 +34,15 @@
           float: right;
         }
         .online{
-          color: green;
+          background-color: green;
         }
         .offline{
-          color: red;
+          background-color: #D3D3D3;
+        }
+        .status{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
         }
       </style>
       <!-- Javascript -->
@@ -123,7 +128,7 @@
               <div id="slider-3"></div>
             <input type="text" id="price2" class="form-control">
           </div>
-          <div class="">
+          <!-- <div class="">
             <h4 class="text-center">Rating</h4>
             <input type="checkbox">  </input>
             <span class="glyphicon glyphicon-star"></span>
@@ -149,7 +154,7 @@
             <span class="glyphicon glyphicon-star"></span>
             <span class="glyphicon glyphicon-star"></span>
             <span class="glyphicon glyphicon-star"></span>
-          </div>
+          </div> -->
           <div>
             <h4 class="text-center">Available</h4>
             <input type="checkbox">  Online</input>
@@ -179,12 +184,12 @@
           </div>
           <div>
             <h4>Languages</h4>
-            <input type="checkbox">English</input>
-            <input type="checkbox">Malayalam</input>
-            <input type="checkbox">Tamil</input>
-            <input type="checkbox">Kanada</input>
-            <input type="checkbox">Punjabi</input>
-            <input type="checkbox">Telugu</input>
+            <input type="checkbox">English</input><br>
+            <input type="checkbox">Malayalam</input><br>
+            <input type="checkbox">Tamil</input><br>
+            <input type="checkbox">Kanada</input><br>
+            <input type="checkbox">Punjabi</input><br>
+            <input type="checkbox">Telugu</input><br>
             <input type="checkbox">Marathi</input>
           </div>
           <div class="text-center">
@@ -199,7 +204,7 @@
               <img src="img/anchors/anjana/_91A9911.jpg">
             </div>
             <div>
-              <h3>Anjana <span class="glyphicon glyphicon-asterisk right online"></h3>
+              <h3>Anjana <div class="status right online"></div></h3>
               <span>Emcee/Anchor</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -212,13 +217,14 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
               <img src="img/anchors/dayana/_91A0024.jpg">
             </div>
             <div>
-              <h3>Dayana <span class="glyphicon glyphicon-asterisk right offline"></h3>
+              <h3>Dayana <div class="status right offline"></div></h3>
               <span>Emcee/Anchor/VJ/Actores</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -231,6 +237,7 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <!-- <div class="col-sm-4 anchor-container">
             <div class="img">
@@ -247,7 +254,7 @@
               <img src="img/anchors/mariyamma/_91A9671.jpg">
             </div>
             <div>
-              <h3>Mariyamma <span class="glyphicon glyphicon-asterisk right online"></h3>
+              <h3>Mariyamma <div class="status right online"></div></h3>
               <span>Emcee/Anchor/VJ</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -260,13 +267,14 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
               <img src="img/anchors/meenakshi/_91A9848.jpg">
             </div>
             <div>
-              <h3>Meenakshi <span class="glyphicon glyphicon-asterisk right offline"></h3>
+              <h3>Meenakshi <div class="status right offline"></div></h3>
               <span>Emcee/Anchor</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -279,6 +287,7 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <!-- <div class="col-sm-4 anchor-container">
             <div class="img">
@@ -295,7 +304,7 @@
               <img src="img/anchors/midun/_91A9542.jpg">
             </div>
             <div>
-              <h3>Midun <span class="glyphicon glyphicon-asterisk right online"></span></h3>
+              <h3>Midun <div class="status right online"></div></h3>
               <span>Emcee/Anchor</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -308,13 +317,14 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
               <img src="img/anchors/rajesh/_91A9598.jpg">
             </div>
             <div>
-              <h3>Rajesh <span class="glyphicon glyphicon-asterisk right online"></h3>
+              <h3>Rajesh <div class="status right online"></div></h3>
               <span>Emcee/Anchor/Artist</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -327,6 +337,7 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <!-- <div class="col-sm-4 anchor-container">
             <div class="img">
@@ -344,7 +355,7 @@
               <img src="img/anchors/hingston/10401967_10204628088844416_4736984207701486366_n.jpg">
             </div>
             <div>
-              <h3>Hingston <span class="glyphicon glyphicon-asterisk right offline"></h3>
+              <h3>Hingston <div class="status right online"></div></h3>
               <span>Emcee/Anchor</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -357,13 +368,14 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
               <img src="img/anchors/malu/09.jpg">
             </div>
             <div>
-              <h3>Malu <span class="glyphicon glyphicon-asterisk right online"></h3>
+              <h3>Malu <div class="status right offline"></div></h3>
               <span>Emcee/Anchor/Artist</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -376,6 +388,7 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <!-- <div class="col-sm-4 anchor-container">
             <div class="img">
@@ -393,7 +406,7 @@
               <img src="img/anchors/anmarin/603504_421798967878434_14949523_n.jpg">
             </div>
             <div>
-              <h3>An Marin <span class="glyphicon glyphicon-asterisk right online"></h3>
+              <h3>An Marin <div class="status right online"></div></h3>
               <span>Emcee/Anchor</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -406,13 +419,14 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <div class="col-sm-6 anchor-container">
             <div class="img anchor-image">
               <img src="img/anchors/malu/09.jpg">
             </div>
             <div>
-              <h3>Meenakshi <span class="glyphicon glyphicon-asterisk right online"></h3>
+              <h3>Meenakshi <div class="status right offline"></div></h3>
               <span>Emcee/Anchor/Artist</span>
               <p>Kochi <span class="glyphicon glyphicon-map-marker"></span></p>
               <div class="anchor-star">
@@ -425,6 +439,7 @@
             </div>
             <a href="book.html"><button class="btn btn-default">Book Now</button></a>
             <a href="view_profile.html"><button class="btn btn-default">View Profile</button></a>
+            <span class="glyphicon glyphicon-calendar right"></span>
           </div>
           <!-- <div class="col-sm-4 anchor-container">
             <div class="img">
